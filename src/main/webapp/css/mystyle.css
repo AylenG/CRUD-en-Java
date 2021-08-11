@@ -1,0 +1,111 @@
+/*container del form con efecto en el hover*/
+.main-container-lista{
+    height: auto;
+    max-width: 30em;
+    min-width: 30em;
+    background: var(--container-background-color);
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .5s ease;
+}
+.main-container-lista:hover {
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+.main-container {
+    padding: 20px;
+    min-width: 15em;
+    height: 420px;
+    background: var(--container-background-color);
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .5s ease;
+}
+.main-container:hover {
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+/*Cambio el color del form input al hacer click*/
+.form-control:checked{
+    border-color: aliceblue !important;
+}
+.form-control:focus{
+    border-color: var(--main-bg-color);
+    box-shadow: 1px 1px var(--button-color-hover);
+}
+/*Cambio el color del check form*/
+.form-check-input:checked{
+    background-color: var(--button-color-main);
+    border-color: var(--button-color-main);
+    filter: drop-shadow(160px 160px 200px --main-bg-color)!important;
+}
+.no-border:focus {
+    border: 1;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+}
+/*Atributos que deberían tener todos los botones para tener una uniformidad*/
+.button-custom{
+    border: 1px var(--button-color-main);
+    background-color: var(--button-color-main);
+    transition-duration: var(--transition-hover);
+    width: var(--button-widht);
+    height: var(--button-height);
+}
+.button-custom:hover{
+    border: 1px var(--button-color-main);
+    box-shadow: 2px 2px var(--button-color-hover);
+    top: -1px;
+    left: -1px;
+}
+/*boton custom navbar*/
+.nav-button {
+    transition-duration: var(--transition-hover);
+}
+/*margin en el primer boton del nav*/
+.nav-button:first-child{
+    margin-right: 15px;
+}
+.nav-button:hover{
+    border: 1px var(--button-color-main);
+    box-shadow: 2px 2px var(--button-color-hover);
+    top: -1px;
+    left: -1px;
+    border: 1px var(--button-color-main);
+    border-radius: .25em;
+    background-color: var(--button-color-main);
+}
+/*este ID es especial para poder cambiar el color de la letra, no preguntes como pero estuve 40 minutos para cambiar el color al font jejejeje*/
+#nav-button{
+    color: white !important;
+    width: var(--button-widht);
+    height: var(--button-height);
+    text-align: center;
+ 
+}
+/*Este media query soluciona los problemas para los dispositivos con pantalla chica*/
+@media (max-width: 768px) {
+    .main-container {
+      max-width: 90vw;
+    }
+    .nav-button:first-child{
+        margin-right: 0px;
+    }
+    .nav-button{
+        text-align: center;
+    }
+    .main-container-lista{
+        min-width: 20em;
+    }
+}
+@media (max-width: 1000px) {
+    .nav-button{
+        text-align: center;
+        margin-top: 15px;
+    }
+    .nav-button:first-child{
+        margin-right: 0px;
+    }
+}
+@media (max-width: 424px) {
+    .main-container-lista{
+        min-width: 15em;
+    }
+}
+
